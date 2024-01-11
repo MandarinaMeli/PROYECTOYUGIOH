@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Juego</title>
+</head>
+<body>
+    <h1> Crea un juego </h1>
+
+    <form action="nuevoJuego" method="post"> {% csrf_token %}
+
+        
+
+        <p> nombre <input type="text"> </p>
+        <p> año    <input type="number"> </p>
+        <p> invocacion <input type="text"> </p>
+        <p> personajes <input type="text"> </p>
+
+        <input type="submit" value="Guardar">
+    </form>
+
+
+</body>
+</html>
