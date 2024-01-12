@@ -36,17 +36,17 @@ def inicio(request):
 
 
 def agregar_serie(request):
-    
-    serie1 = Serie(nombre = "YUGIOH DUEL MONSTERS", año = 2004, invocacion = "sacrificio", personaje = "Yugi Muto") #Crear un objeto usando el modulo
+ 
+    serie1 = Serie(nombre = "YUGIOH DUEL MONSTERS", año = 2004, invocacion = "sacrificio", personajes = "Yugi Muto") #Crear un objeto usando el modulo
     serie1.save()
 
     return HttpResponse("Se agrego una serie..")
-
+  
 
 
 def agregar_juego(request):
     
-    juego1 = Juego(nombre = "YUGIOH Duel Link", año = 2006, invocacion = "sacrificio,especial,xyz,sincro,pendulo", personaje = "Yugi Muto, Seto Kaiba") #Crear un objeto usando el modulo
+    juego1 = Juego(nombre = "YUGIOH Duel Link", año = 2006, invocacion = "sacrificio,especial,xyz,sincro,pendulo", personajes = "Yugi Muto, Seto Kaiba") #Crear un objeto usando el modulo
     juego1.save()
 
     return HttpResponse("Se agrego un juego..")
@@ -54,9 +54,31 @@ def agregar_juego(request):
 
 def agregar_pelicula(request):
     
-    pelicula1 = Pelicula(nombre = "YUGIOH ", año = 2007, invocacion = "sacrificio,especial,xyz,sincro,pendulo", personaje = "Yugi Muto, Seto Kaiba, Joy willer") #Crear un objeto usando el modulo
+    pelicula1 = Pelicula(nombre = "YUGIOH ", año = 2007, invocacion = "sacrificio,especial,xyz,sincro,pendulo", personajes = "Yugi Muto, Seto Kaiba, Joy willer") #Crear un objeto usando el modulo
     pelicula1.save()
 
     return HttpResponse("Se agrego un juego..")
 
+def agregar_serie(request):
+ 
 
+
+    return render(request, "CARTAS/nuevo_serie.html")
+ 
+
+
+def agregar_juego(request):
+ 
+
+
+    return render(request, "CARTAS/nuevo_juego.html")
+
+
+
+
+
+def agregar_pelicula(request):
+ 
+
+
+    return render(request, "CARTAS/nuevo_pelicula.html")

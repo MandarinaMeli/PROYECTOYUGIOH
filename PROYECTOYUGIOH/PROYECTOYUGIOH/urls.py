@@ -31,6 +31,5 @@ urlpatterns = [
     path("nuevaSerie/", agregar_serie, name="Serie"),
     path("nuevoJuego/", agregar_juego, name="Juego"),
     path("nuevoPelicula/", agregar_pelicula, name="Pelicula"),
-
-
+    
 ]
